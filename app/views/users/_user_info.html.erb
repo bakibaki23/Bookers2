@@ -1,0 +1,28 @@
+<h2>User info</h2>
+<!--profile_image-->
+<%= image_tag @user.get_profile_image(100,100) %>
+<!--profile-->
+<table class="table">
+  <tbody>
+    <!--name-->
+    <tr>
+      <th>name</th>
+      <th><%= @user.name %></th>
+    </tr>
+    <!--introduction-->
+    <tr>
+      <th>introduction</th>
+      <th><%= @user.introduction %></th>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+<!--profile edit-->
+<div class="row">
+  <%= link_to edit_user_path(user.id), class: 'btn btn-outline-secondary btn-block' do %>
+    <i class="fas fa-user-cog"></i>
+  <% end %>
+</div>
+
+<p id="noticce"></p>
